@@ -1,0 +1,7 @@
+{
+    "env": {
+        "MONGO_USER": "Gokul",
+        "MONGO_PASS": "NU8JXeASiwwFgMIa",
+        "MONGO_DB": "events_graphql"
+    }
+}
