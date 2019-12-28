@@ -38,10 +38,17 @@ type User{
     password: String,
     createdEvents: [Event!]
 }
+
+type AuthData {
+    userId: ID!
+    token: String!
+    tokenExpiration: Int!
+}
   
 type Query{
     events: [Event!]!
     bookings: [Booking!]! 
+    login(email: String!, password: String!): AuthData  
 }
 
 
@@ -51,5 +58,4 @@ type Mutation{
     bookEvent(eventId: ID!): Booking!
     cancelBooking(bookingId: ID!): Event!
 }
-
 `);
