@@ -9,7 +9,6 @@ module.exports = (req, res, next) => {
   }
 
   const token = authHeader.split(" ")[1];
-  console.log(token)
   if (!token || token.trim() == "") {
     req.isAuth = false;
     return next();
